@@ -21,10 +21,11 @@ Run the avoidance.sh script in the catkin-ws directory. \
 Step 4: Run the autonomous drone package
 -->
 
-## Trial 1 Simulator
+## Trial 1 and 2 Simulators
 ### Build and Run
-This repository contains the Trial 1 and Trial 2 worlds that solutions will be tested in. \
-Begin by cloning this repository onto your machine. Once it is downloaded, follow these steps to begin the simulation: \
+This repository contains the Trial 1 and Trial 2 worlds that solutions will be tested in. 
+
+Begin by cloning this repository onto your machine. Once it is downloaded, follow these steps to begin the simulation: 
 
 Step 1: Build the plugin
 ```mkdir build
@@ -42,8 +43,9 @@ Step 3: Run the world using Gazebo
 ```cd ~uavcc-simulator/trial_1_setup
 gazebo animated_box.world
 ```
-Video: trial_1_setup.mp4
-
+To run the Trial 2 world, follow the same instructions for Trial 1 with the trial_2_setup directory.
+## System Information
+This simuator was tested on Ubuntu 18.04 with ROS Melodic.
 ## Frequently Asked Questions
 ### The Trial 1 world loads in Gazebo, but the object does not move.
 This occurs when the GAZEBO_PLUGIN_PATH is incorrect. Repeat step 2 and attempt to run the world again.
