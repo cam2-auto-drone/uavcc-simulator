@@ -11,11 +11,13 @@ Upon execution, if you are able to see an RViz window display the drone and its 
 ## Sample Control System
 We have provided a sample control system that will follow the rover in the first simulated trial. To run this solution, follow these steps. \\
 
-Step 1: Build the caktin workspace
+Step 1: Build the caktin workspace \\
 From the catkin workspace, run ```catkin build```.
-Step 2: Sourcing
-Step 3: Run Avoidance
-Run the avoidance.sh script in the catkin-ws directory.
+Step 2: Sourcing \\
+Next, source the environment. \\
+```source devel/setup.bash```
+Step 3: Run Avoidance \\
+Run the avoidance.sh script in the catkin-ws directory. \\
 Step 4: Run the autonomous drone package
 
 
