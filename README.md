@@ -1,1 +1,0 @@
-# uavcc-simulator

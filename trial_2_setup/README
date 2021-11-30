@@ -1,0 +1,16 @@
+Step 1: Open terminal in the trial_2_setup folder and run the following commands
+
+mkdir build
+cd build
+cmake ../
+make
+
+Step 2: Copy and Paste this on the terminal inside trial_2_setup/build/ and press enter:
+
+export GAZEBO_PLUGIN_PATH=`pwd`:$GAZEBO_PLUGIN_PATH
+
+Step 3: Run the environment/world in gazebo
+
+cd ~/trail_2_setup
+gazebo trial_2.world
+
