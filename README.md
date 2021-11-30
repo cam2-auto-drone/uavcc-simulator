@@ -46,4 +46,4 @@ Video: trial_1_setup.mp4
 
 ## Frequently Asked Questions
 ### The Trial 1 world loads in Gazebo, but the object does not move.
-This occurs when the GAZEBO_PLUGIN_PATH is incorrect. Repeat step 2 and attempt to run the world agian.
+This occurs when the GAZEBO_PLUGIN_PATH is incorrect. Repeat step 2 and attempt to run the world again.
