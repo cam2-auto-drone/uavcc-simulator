@@ -19,7 +19,7 @@
 #include <gazebo/physics/physics.hh>
 #include <gazebo/common/common.hh>
 #include <stdio.h>
-#include "newFrameGenerator.cpp"
+
 namespace gazebo
 {
   class AnimatedBox : public ModelPlugin
@@ -34,33 +34,96 @@ namespace gazebo
               // name the animation "test",
               // make it last 10 seconds,
               // and set it on a repeat loop
-              new gazebo::common::PoseAnimation("test", 10, true));
+              new gazebo::common::PoseAnimation("test", 50, true));
 
         gazebo::common::PoseKeyFrame *key;
-        
-        newFrameGenerator* nfg1 = new newFrameGenerator();
+
         // set starting location of the box
-        double currentLocation[6] = {0, 0, 0.05, 0, 0, 0};
         key = anim->CreateKeyFrame(0);
-        key->Translation(ignition::math::Vector3d(currentLocation[0], currentLocation[1], currentLocation[2]));
-        key->Rotation(ignition::math::Quaterniond(currentLocation[3], currentLocation[4], currentLocation[5]));
+        key->Translation(ignition::math::Vector3d(0, 0, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 0));
 
-        nfg1->createForwardFrameYaw_Overwrite(currentLocation, 5);
-        key = anim->CreateKeyFrame(5);
-        key->Translation(ignition::math::Vector3d(currentLocation[0], currentLocation[1], currentLocation[2]));
-        key->Rotation(ignition::math::Quaterniond(currentLocation[3], currentLocation[4], currentLocation[5]));
+        // set waypoint location after 2 seconds
+        key = anim->CreateKeyFrame(2.0);
+        key->Translation(ignition::math::Vector3d(1, 0, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 0));
 
-        double ** rightTurnFrames_0 = nfg1->rightRadiusTurn(currentLocation, 5);
 
-        key = anim->CreateKeyFrame(7.5);
-        key->Translation(ignition::math::Vector3d(rightTurnFrames_0[0][0], rightTurnFrames_0[0][1], rightTurnFrames_0[0][2]));
-        key->Rotation(ignition::math::Quaterniond(rightTurnFrames_0[0][3], rightTurnFrames_0[0][4], rightTurnFrames_0[0][5]));
+        key = anim->CreateKeyFrame(4.0);
+        key->Translation(ignition::math::Vector3d(1.5, 0, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 0));
 
-        key = anim->CreateKeyFrame(10);
-        key->Translation(ignition::math::Vector3d(rightTurnFrames_0[1][0], rightTurnFrames_0[1][1], rightTurnFrames_0[1][2]));
-        key->Rotation(ignition::math::Quaterniond(rightTurnFrames_0[1][3], rightTurnFrames_0[1][4], rightTurnFrames_0[1][5]));
 
-  //       
+        key = anim->CreateKeyFrame(6.0);
+        key->Translation(ignition::math::Vector3d(2, 0, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 0));
+
+
+        key = anim->CreateKeyFrame(8.0);
+        key->Translation(ignition::math::Vector3d(2.33, 0, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 0));
+	
+	key = anim->CreateKeyFrame(10.0);
+        key->Translation(ignition::math::Vector3d(3, 0, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 0));
+
+	key = anim->CreateKeyFrame(12.0);
+        key->Translation(ignition::math::Vector3d(3.5, 0, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 0));
+
+        key = anim->CreateKeyFrame(14.0);
+        key->Translation(ignition::math::Vector3d(3.7, 0.5, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0.0, 0, 1.57));
+
+	 key = anim->CreateKeyFrame(18.0);
+        key->Translation(ignition::math::Vector3d(4, 4, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 1.57));
+
+	 key = anim->CreateKeyFrame(21.0);
+        key->Translation(ignition::math::Vector3d(4, 8.5, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 1.57));
+
+	 key = anim->CreateKeyFrame(24.0);
+        key->Translation(ignition::math::Vector3d(4, 9.0, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 1.57));
+
+
+	 key = anim->CreateKeyFrame(26.0);
+        key->Translation(ignition::math::Vector3d(4, 10.4, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 1.57));
+
+	 key = anim->CreateKeyFrame(28.0);
+        key->Translation(ignition::math::Vector3d(3.6, 10.4, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 3.14));
+
+	 key = anim->CreateKeyFrame(30.0);
+        key->Translation(ignition::math::Vector3d(2.0, 10.4, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 3.14));
+
+	 key = anim->CreateKeyFrame(36.0);
+        key->Translation(ignition::math::Vector3d(-2.0, 10.4, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 3.14));
+
+	 key = anim->CreateKeyFrame(38.0);
+        key->Translation(ignition::math::Vector3d(-3.7, 9.0, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 4.71));
+
+	 key = anim->CreateKeyFrame(40.0);
+        key->Translation(ignition::math::Vector3d(-3.7, 5.0, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 4.71));
+
+	 key = anim->CreateKeyFrame(44.0);
+        key->Translation(ignition::math::Vector3d(-3.7, 1.0, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 4.71));
+
+	 key = anim->CreateKeyFrame(48.0);
+        key->Translation(ignition::math::Vector3d(-2.7,0.5 , 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 5.49));
+
+	 key = anim->CreateKeyFrame(50.0);
+        key->Translation(ignition::math::Vector3d(0, 0.0, 0.05));
+        key->Rotation(ignition::math::Quaterniond(0, 0, 6.28));
+
 
 
 

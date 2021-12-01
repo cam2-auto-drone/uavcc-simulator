@@ -1,5 +1,0 @@
-/home/hunter/Auto-Drone/trial_1_setup/CMakeFiles/edit_cache.dir
-/home/hunter/Auto-Drone/trial_1_setup/CMakeFiles/animated_box.dir
-/home/hunter/Auto-Drone/trial_1_setup/CMakeFiles/rebuild_cache.dir
-/home/hunter/Auto-Drone/trial_1_setup/CMakeFiles/independent_listener.dir
-/home/hunter/Auto-Drone/trial_1_setup/CMakeFiles/integrated_main.dir
