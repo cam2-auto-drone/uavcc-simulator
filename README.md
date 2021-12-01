@@ -48,4 +48,4 @@ To run the Trial 2 world, follow the same instructions for Trial 1 with the tria
 This simuator was tested on Ubuntu 18.04 with ROS Melodic.
 ## Frequently Asked Questions
 ### The Trial 1 world loads in Gazebo, but the object does not move.
-This occurs when the GAZEBO_PLUGIN_PATH is incorrect. Repeat step 2 and attempt to run the world again.
+This occurs when the GAZEBO_PLUGIN_PATH is incorrect. Ensure step 2 is run each time you run the program in a new terminal. The line in step 2 may be added to ```~/.bashrc``` to be run automatically each time a new terminal is opened.
