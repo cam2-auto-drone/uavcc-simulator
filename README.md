@@ -41,7 +41,7 @@ Step 2: Update the Gazebo plugin path so that the current path is included. Run 
 Step 3: Run the world using Gazebo
 
 ```cd ~uavcc-simulator/trial_1_setup
-gazebo animated_box.world
+gazebo trial_1.world
 ```
 To run the Trial 2 world, follow the same instructions for Trial 1 with the trial_2_setup directory.
 ## System Information
