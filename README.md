@@ -6,7 +6,7 @@ Complete the instructions until you reach the step to run local planner with the
 ```
 roslaunch local_planner local_planner_depth-camera.launch
 ```
-Upon execution, if you are able to see an RViz window display the drone and its pointcloud, you have successfully installed all necessary technologies.
+Upon execution, if you are able to see an RViz window display the drone and its pointcloud, you have successfully installed all necessary dependencies.
 <!--
 ## Sample Control System
 We have provided a sample control system that will follow the rover in the first simulated trial. To run this solution, follow these steps. \
