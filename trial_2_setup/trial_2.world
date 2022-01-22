@@ -1,6 +1,11 @@
 <?xml version="1.0"?> 
 <sdf version="1.4">
   <world name="trial_1_world">
+    <gui>
+      <camera name="user_camera">
+        <pose>0 -11.0 24.5 0 1.0 1.5708</pose>
+      </camera>
+    </gui>
 
     <!-- Ground Plane -->
     <include>

@@ -27,7 +27,7 @@ This repository contains the Trial 1 and Trial 2 worlds that solutions will be t
 
 Begin by cloning this repository onto your machine. Once it is downloaded, follow these steps to begin the simulation: 
 
-Step 1: From the trial_1_setup directory, build the plugin
+Step 1: From the `trial_1_setup` and `trial_2_setup` directory, build the plugin
 ```mkdir build
 cd build
 cmake ../
