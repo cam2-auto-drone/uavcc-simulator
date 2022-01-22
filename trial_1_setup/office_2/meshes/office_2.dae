@@ -165,7 +165,7 @@
         <instance_light url="#EnvironmentAmbientLight"/>
       </node>
       <node id="node-Downtown_2" name="Downtown_2">
-        <scale>0.01513206 0.01513206 0.01513206</scale>
+        <scale>1.513206 1.513206 1.513206</scale>
         <instance_geometry url="#geom-Downtown_2">
           <bind_material>
             <technique_common>

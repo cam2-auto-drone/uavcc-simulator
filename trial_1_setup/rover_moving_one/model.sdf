@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
-  <model name='rover'>
+  <model name='rover_moving_one'>
     <link name='link'>
       <self_collide>0</self_collide>
       <enable_wind>0</enable_wind>
@@ -23,7 +23,7 @@
         <pose frame=''>0 0 0 0 0 -1.5708</pose>
         <geometry>
           <mesh>
-            <uri>model://pickup/meshes/pickup.dae</uri>
+            <uri>model://rover_moving_one/meshes/rover_moving_one.dae</uri>
             <scale>0.2 0.2 0.2</scale>
           </mesh>
         </geometry>
@@ -200,6 +200,6 @@
     </link>
     <static>1</static>
     <allow_auto_disable>1</allow_auto_disable>
-    <plugin name='push_animate' filename='libanimated_box.so'/>
+    <plugin name='push_animate' filename='libanimated_box_one.so'/>
   </model>
 </sdf>

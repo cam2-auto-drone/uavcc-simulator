@@ -27,7 +27,7 @@ This repository contains the Trial 1 and Trial 2 worlds that solutions will be t
 
 Begin by cloning this repository onto your machine. Once it is downloaded, follow these steps to begin the simulation: 
 
-Step 1: From the trial_1_setup directory, build the plugin
+Step 1: From the `trial_1_setup` and `trial_2_setup` directory, build the plugin
 ```mkdir build
 cd build
 cmake ../
@@ -36,13 +36,25 @@ make
 ```
 Step 2: Update the Gazebo plugin path so that the current path is included. Run this command from the build directory.
 
-```export GAZEBO_PLUGIN_PATH=`pwd`:$GAZEBO_PLUGIN_PATH```
-
-Step 3: Run the world using Gazebo
-
-```cd ~uavcc-simulator/trial_1_setup
-gazebo trial_1.world
 ```
+echo "export GAZEBO_PLUGIN_PATH=`pwd`:$GAZEBO_PLUGIN_PATH" >> ~/.bashrc
+source ~/.bashrc
+```
+
+Step 3: Update the Gazebo model path so that the models can be loaded properly.
+```
+cd ~/the_repository_path
+echo "export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:$(pwd)/trial_1_setup:$(pwd)/trial_2_setup" >> ~/.bashrc
+source ~/.bashrc
+```
+
+Step 4: Run the world using Gazebo
+
+```
+cd ~uavcc-simulator/trial_1_setup
+roslaunch gazebo_ros empty_world.launch world_name:=$(pwd)/trial_1.world
+```
+
 To run the Trial 2 world, follow the same instructions for Trial 1 with the trial_2_setup directory.
 ## System Information
 This simuator was tested on Ubuntu 18.04 with ROS Melodic.
