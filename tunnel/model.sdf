@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+
+    <model name="tunnel">
+      <pose>0 0 0  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+
+        <inertial>
+             <mass>500</mass>
+             <inertia>
+               <ixx>0.001087473</ixx>
+               <iyy>0.001087473</iyy>
+               <izz>0.001092437</izz>
+               <ixy>0</ixy>
+               <ixz>0</ixz>
+               <iyz>0</iyz>
+             </inertia>
+           </inertial>
+
+        <visual name="visual">
+          <geometry>
+            <mesh><uri>model://tunnel/meshes/tunnel_brick.dae</uri></mesh>
+          </geometry>
+        </visual>
+
+        <collision name="collision">
+          <geometry>
+            <mesh><uri>model://tunnel/meshes/tunnel_brick.dae</uri></mesh>
+          </geometry>
+        </collision>
+
+    </link>
+  </model>
+
+</sdf>
